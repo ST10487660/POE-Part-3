@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Blu Sky's Online Movie Store - Your Ultimate Movie Destination</title>
+    <meta name="description" content="Discover the latest movies at Blu Sky's Online Movie Store. Horror, Action, Romance, Animation and more. Best prices in South Africa!">
+    <meta name="keywords" content="movies, online store, Blu-ray, South Africa, horror movies, action films, movie rentals">
+    <meta name="author" content="Blu Sky's Movie Store">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Blu Sky's Online Movie Store">
+    <meta property="og:description" content="Movies That Take You Beyond The Clouds">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="css/Style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="branding">
+                <h1 class="titles">BLU SKY'S ONLINE MOVIE STORE</h1>
+                <h2 class="slogan">Movies That Take You Beyond The Clouds</h2>
+            </div>
+            <ul>
+                <li><a href="index.html">Home page</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="news.html">News update</a></li>
+                <li><a href="contact.html">Contact details</a></li>
+                <li><a href="enquiry.html">Movie Inquiries</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="inquiry-form">
+            <h2>Movie & Service Inquiries</h2>
+            <p>Looking for specific movies or have questions about our services? Fill out the form below!</p>
+            
+            <form id="inquiryForm">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="inquiry-type">Inquiry Type:</label>
+                    <select id="inquiry-type" name="inquiry-type" required>
+                        <option value="">Select an option</option>
+                        <option value="movie-availability">Movie Availability</option>
+                        <option value="pricing">Pricing Information</option>
+                        <option value="bulk-order">Bulk Order</option>
+                        <option value="partnership">Partnership</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="movie-title">Movie Title (if applicable):</label>
+                    <input type="text" id="movie-title" name="movie-title">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit">Submit Inquiry</button>
+            </form>
+            
+            <div id="inquiryResponse" style="display: none; margin-top: 20px; padding: 15px; background: #f0f8ff; border-left: 4px solid #007bff;"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; ST10487660</p>
+        <p>&copy; 2025 Blu Sky's Online Movie Store. All rights reserved.</p>
+    </footer>
+
+    <script src="js/forms.js"></script>
+</body>
+</html>

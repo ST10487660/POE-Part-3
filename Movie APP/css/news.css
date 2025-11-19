@@ -1,0 +1,347 @@
+/* News.css - Interactive News Styles */
+.news-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    margin: -20px -20px 40px -20px;
+}
+
+.news-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.news-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.news-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.news-grid {
+    display: grid;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.news-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-left: 5px solid #007bff;
+    position: relative;
+    overflow: hidden;
+}
+
+.news-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.5s ease;
+}
+
+.news-card:hover::before {
+    left: 100%;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.news-card.expanded {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    border-left-color: #28a745;
+}
+
+.news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.news-header h3 {
+    margin: 0;
+    color: #007bff;
+    flex: 1;
+    font-size: 1.5rem;
+}
+
+.news-date {
+    color: #666;
+    font-size: 0.9rem;
+    background: #f8f9fa;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.news-preview p {
+    margin: 0 0 15px 0;
+    color: #333;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.news-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.tag.new { background: #28a745; color: white; }
+.tag.movies { background: #007bff; color: white; }
+.tag.sale { background: #dc3545; color: white; }
+.tag.holiday { background: #ffc107; color: #000; }
+.tag.update { background: #6f42c1; color: white; }
+.tag.feature { background: #20c997; color: white; }
+.tag.event { background: #fd7e14; color: white; }
+.tag.reward { background: #e83e8c; color: white; }
+.tag.community { background: #17a2b8; color: white; }
+
+.news-full {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.news-card.expanded .news-full {
+    max-height: 1000px;
+    animation: fadeIn 0.5s ease;
+}
+
+.news-full p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.news-full ul {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.news-full li {
+    margin-bottom: 10px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.discount-grid {
+    display: grid;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.discount-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #28a745;
+}
+
+.discount-percent {
+    background: #dc3545;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    min-width: 80px;
+    text-align: center;
+}
+
+.discount-text {
+    font-weight: bold;
+    color: #333;
+}
+
+.marathon-themes {
+    display: grid;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.theme-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.theme-card h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+}
+
+.theme-card p {
+    margin: 0;
+    opacity: 0.9;
+}
+
+.news-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.news-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.news-btn.primary {
+    background: #007bff;
+    color: white;
+}
+
+.news-btn.primary:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,123,255,0.3);
+}
+
+.news-btn.secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.news-btn.secondary:hover {
+    background: #545b62;
+    transform: translateY(-2px);
+}
+
+/* Newsletter Section */
+.newsletter-section {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    padding: 50px 30px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+}
+
+.newsletter-card h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.newsletter-card p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.newsletter-input {
+    flex: 1;
+    min-width: 250px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.newsletter-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.newsletter-btn:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+.newsletter-note {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .news-hero {
+        padding: 40px 20px;
+    }
+    
+    .news-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .news-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .news-actions {
+        flex-direction: column;
+    }
+    
+    .news-btn {
+        width: 100%;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .newsletter-input {
+        min-width: auto;
+    }
+}

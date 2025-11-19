@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Gallery - Blu Sky's Online Movie Store</title>
+    <meta name="description" content="Browse our extensive movie collection at Blu Sky's Online Movie Store. Horror, Action, Comedy and more.">
+    <meta name="keywords" content="movie gallery, film collection, Blu-ray movies, South Africa movies">
+    <link rel="stylesheet" href="css/Style.css">
+    <link rel="stylesheet" href="css/Gallery.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="branding">
+                <h1 class="titles">BLU SKY'S ONLINE MOVIE STORE</h1>
+                <h2 class="slogan">Movies That Take You Beyond The Clouds</h2>
+            </div>
+            <ul>
+                <li><a href="index.html">Home page</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="news.html">News update</a></li>
+                <li><a href="contact.html">Contact details</a></li>
+                <li><a href="enquiry.html">Movie Inquiries</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="gallery-section">
+            <h2>Movie Gallery</h2>
+            <p>Browse our extensive collection of movies. Use the search below to find specific titles.</p>
+            
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" id="movieSearch" placeholder="🔍 Search for movies... (e.g., Deadpool, Avengers, Spider-Man)" 
+                       class="search-input">
+                <div class="search-info" id="searchInfo">Type to search our collection</div>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Movies</button>
+                <button class="filter-btn" data-filter="action">Action</button>
+                <button class="filter-btn" data-filter="horror">Horror</button>
+                <button class="filter-btn" data-filter="superhero">Superhero</button>
+                <button class="filter-btn" data-filter="animation">Animation</button>
+                <button class="filter-btn" data-filter="comedy">Comedy</button>
+            </div>
+
+            <!-- Movie Counter -->
+            <div class="movie-counter">
+                <span id="movieCount">14</span> movies available
+            </div>
+
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="movie-item" data-title="Deadpool" data-genre="Action Comedy" data-price="R99.99">
+                    <img src="images/Deadpool.jpg" alt="Deadpool - Action Comedy Movie">
+                    <div class="movie-info">
+                        <h4>Deadpool</h4>
+                        <p>Action Comedy • R99.99</p>
+                        <button class="view-btn" onclick="showMovieDetails('Deadpool', 'Action Comedy', 'R99.99')">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="movie-item" data-title="Demon Slayer" data-genre="Anime Action" data-price="Coming Soon">
+                    <img src="images/demon-slayer-kimetsu-no-yaiba.jpg" alt="Demon Slayer - Anime Action Movie">
+                    <div class="movie-info">
+                        <h4>Demon Slayer</h4>
+                        <p>Anime Action • Coming Soon</p>
+                        <button class="view-btn" onclick="showMovieDetails('Demon Slayer', 'Anime Action', 'Coming Soon')">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="movie-item" data-title="Avengers End Game" data-genre="Superhero Action" data-price="R129.99">
+                    <img src="images/end game.jpg" alt="Avengers End Game - Superhero Action Movie">
+                    <div class="movie-info">
+                        <h4>Avengers End Game</h4>
+                        <p>Superhero Action • R129.99</p>
+                        <button class="view-btn" onclick="showMovieDetails('Avengers End Game', 'Superhero Action', 'R129.99')">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="movie-item" data-title="Spider Man Far From Home" data-genre="Superhero Action" data-price="R109.99">
+                    <img src="images/far from home.jpeg" alt="Spider Man Far From Home - Superhero Movie">
+                    <div class="movie-info">
+                        <h4>Spider Man: Far From Home</h4>
+                        <p>Superhero Action • R109.99</p>
+                        <button class="view-btn" onclick="showMovieDetails('Spider Man Far From Home', 'Superhero Action', 'R109.99')">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="movie-item" data-title="Spider Man Homecoming" data-genre="Superhero Action" data-price="R109.99">
+                    <img src="images/Homecoming.jpeg" alt="Spider Man Homecoming - Superhero Movie">
+                    <div class="movie-info">
+                        <h4>Spider Man: Homecoming</h4>
+                        <p>Superhero Action • R109.99</p>
+                        <button class="view-btn" onclick="showMovieDetails('Spider Man Homecoming', 'Superhero Action', 'R109.99')">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="movie-item" data-title="I Am Legend" data-genre="Horror Thriller" data-price="R89.99">
+                    <img src="images/I AM A LEGEND.jpg" alt="I Am Legend - Horror Thriller Movie">
+                    <div class="movie-info">
+                        <h4>I Am Legend</h4>
+                        <p>Horror Thriller • R89.99</p>
+                        <button class="view-btn" onclick="showMovieDetails('I Am Legend', 'Horror Thriller', 'R89.99')">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="movie-item" data-title="Inside Out" data-genre="Animation Family" data-price="R79.99">
+                    <img src="images/inside out.jpeg" alt="Inside Out - Animation Family Movie">
+                    <div class="movie-info">
+                        <h4>Inside Out</h4>
+                        <p>Animation Family • R79.99</p>
+                        <button class="view-btn" onclick="showMovieDetails('Inside Out', 'Animation Family', 'R79.99')">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="movie-item" data-title="Lion King" data-genre="Animation Family" data-price="R79.99">
+                    <img src="images/Lion King.jpg" alt="Lion King - Animation Family Movie">
+                    <div class="movie-info">
+                        <h4>Lion King</h4>
+                        <p>Animation Family • R79.99</p>
+                        <button class="view-btn" onclick="showMovieDetails('Lion King', 'Animation Family', 'R79.99')">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="movie-item" data-title="Spider Man No Way Home" data-genre="Superhero Action" data-price="R119.99">
+                    <img src="images/no way home.jpeg" alt="Spider Man No Way Home - Superhero Movie">
+                    <div class="movie-info">
+                        <h4>Spider Man: No Way Home</h4>
+                        <p>Superhero Action • R119.99</p>
+                        <button class="view-btn" onclick="showMovieDetails('Spider Man No Way Home', 'Superhero Action', 'R119.99')">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="movie-item" data-title="Scream" data-genre="Horror Thriller" data-price="R94.99">
+                    <img src="images/SCREAM.jpg" alt="Scream - Horror Thriller Movie">
+                    <div class="movie-info">
+                        <h4>Scream</h4>
+                        <p>Horror Thriller • R94.99</p>
+                        <button class="view-btn" onclick="showMovieDetails('Scream', 'Horror Thriller', 'R94.99')">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="movie-item" data-title="Street Crimes" data-genre="Action Crime" data-price="R84.99">
+                    <img src="images/Street Crimes.jpg" alt="Street Crimes - Action Crime Movie">
+                    <div class="movie-info">
+                        <h4>Street Crimes</h4>
+                        <p>Action Crime • R84.99</p>
+                        <button class="view-btn" onclick="showMovieDetails('Street Crimes', 'Action Crime', 'R84.99')">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="movie-item" data-title="The Exorcist" data-genre="Horror" data-price="R99.99">
+                    <img src="images/THE EXORCIST.jpg" alt="The Exorcist - Horror Movie">
+                    <div class="movie-info">
+                        <h4>The Exorcist</h4>
+                        <p>Horror • R99.99</p>
+                        <button class="view-btn" onclick="showMovieDetails('The Exorcist', 'Horror', 'R99.99')">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="movie-item" data-title="The Hunted" data-genre="Thriller Action" data-price="R89.99">
+                    <img src="images/the hunted.jpg" alt="The Hunted - Thriller Action Movie">
+                    <div class="movie-info">
+                        <h4>The Hunted</h4>
+                        <p>Thriller Action • R89.99</p>
+                        <button class="view-btn" onclick="showMovieDetails('The Hunted', 'Thriller Action', 'R89.99')">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="movie-item" data-title="The Nun" data-genre="Horror" data-price="R104.99">
+                    <img src="images/The NUN.jpg" alt="The Nun - Horror Movie">
+                    <div class="movie-info">
+                        <h4>The Nun</h4>
+                        <p>Horror • R104.99</p>
+                        <button class="view-btn" onclick="showMovieDetails('The Nun', 'Horror', 'R104.99')">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- No Results Message -->
+            <div id="noResults" class="no-results" style="display: none;">
+                <h3>No movies found</h3>
+                <p>Try searching for something else</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; ST10487660</p>
+        <p>&copy; 2025 Blu Sky's Online Movie Store. All rights reserved.</p>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="close-lightbox">&times;</span>
+            <img id="lightbox-img" src="" alt="">
+            <div class="lightbox-info">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-genre"></p>
+                <p id="lightbox-price"></p>
+                <button class="buy-btn" onclick="addToCart()">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Simple search functionality
+        function initializeSearch() {
+            const searchInput = document.getElementById('movieSearch');
+            const movieItems = document.querySelectorAll('.movie-item');
+            const movieCount = document.getElementById('movieCount');
+            const searchInfo = document.getElementById('searchInfo');
+            const noResults = document.getElementById('noResults');
+            const galleryGrid = document.getElementById('galleryGrid');
+
+            if (searchInput) {
+                searchInput.addEventListener('input', function(e) {
+                    const searchTerm = e.target.value.toLowerCase().trim();
+                    let visibleCount = 0;
+
+                    movieItems.forEach(item => {
+                        const title = item.getAttribute('data-title').toLowerCase();
+                        const genre = item.getAttribute('data-genre').toLowerCase();
+                        
+                        if (searchTerm === '' || title.includes(searchTerm) || genre.includes(searchTerm)) {
+                            item.style.display = 'block';
+                            visibleCount++;
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+
+                    // Update movie count
+                    movieCount.textContent = visibleCount;
+                    
+                    // Show/hide no results message
+                    if (visibleCount === 0 && searchTerm !== '') {
+                        noResults.style.display = 'block';
+                        galleryGrid.style.display = 'none';
+                        searchInfo.textContent = `No results for "${searchTerm}"`;
+                    } else {
+                        noResults.style.display = 'none';
+                        galleryGrid.style.display = 'grid';
+                        searchInfo.textContent = searchTerm === '' ? 'Type to search our collection' : `Found ${visibleCount} movies for "${searchTerm}"`;
+                    }
+                });
+            }
+        }
+
+        // Movie filtering functionality
+        function initializeFilters() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const movieItems = document.querySelectorAll('.movie-item');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    let visibleCount = 0;
+                    
+                    movieItems.forEach(item => {
+                        const genre = item.getAttribute('data-genre').toLowerCase();
+                        
+                        if (filter === 'all' || genre.includes(filter)) {
+                            item.style.display = 'block';
+                            visibleCount++;
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                    
+                    // Update movie count
+                    document.getElementById('movieCount').textContent = visibleCount;
+                    document.getElementById('searchInfo').textContent = `Showing ${visibleCount} ${filter} movies`;
+                });
+            });
+        }
+
+        // Lightbox functionality
+        function openLightbox(imgElement) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxTitle = document.getElementById('lightbox-title');
+            const lightboxGenre = document.getElementById('lightbox-genre');
+            const lightboxPrice = document.getElementById('lightbox-price');
+            
+            lightboxImg.src = imgElement.src;
+            lightboxImg.alt = imgElement.alt;
+            
+            const movieItem = imgElement.closest('.movie-item');
+            lightboxTitle.textContent = movieItem.getAttribute('data-title');
+            lightboxGenre.textContent = movieItem.getAttribute('data-genre');
+            lightboxPrice.textContent = movieItem.getAttribute('data-price');
+            
+            lightbox.style.display = 'flex';
+        }
+        
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+        
+        function addToCart() {
+            const title = document.getElementById('lightbox-title').textContent;
+            alert(`🎬 Added "${title}" to your cart!`);
+            closeLightbox();
+        }
+
+        // Make all gallery images clickable for lightbox
+        document.querySelectorAll('.gallery-grid img').forEach(img => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', function() {
+                openLightbox(this);
+            });
+        });
+
+        // Close lightbox when clicking X or outside
+        document.querySelector('.close-lightbox').addEventListener('click', closeLightbox);
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) closeLightbox();
+        });
+
+        // Close with ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        // Initialize everything when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeSearch();
+            initializeFilters();
+            
+            // Make all movie images clickable
+            document.querySelectorAll('.movie-item img').forEach(img => {
+                img.style.cursor = 'pointer';
+            });
+        });
+    </script>
+</body>
+</html>
